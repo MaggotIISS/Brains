@@ -26,11 +26,12 @@ import javax.swing.JTextArea;
  */
 public class BrainsController implements Initializable {
 
+  @FXML
+  private CheckBox AGED;
+
   //<editor-fold defaultstate="collapsed" desc="FXVariables">
   @FXML
   private ComboBox<String> BRAINS;
-  @FXML
-  private Label FLUX;
   @FXML
   private TextField INT;
   @FXML
@@ -414,6 +415,7 @@ public class BrainsController implements Initializable {
     printDetails();
   }
 
+  @FXML
   private void printDetails() {
     ta.setText("");
     ta.appendText("BRAIN ID: ");
@@ -463,7 +465,17 @@ public class BrainsController implements Initializable {
     for (int i = 0; i < outs.length; i++) {
       ta.appendText(labels[i] + " = " + outs[i].getText() + CRLF);
     }
-
+    // Aging roll after 1year to settle INT
+    int num = 0;
+    if (AGED.isSelected()) {
+      int d1 = (int) (Math.random() * 6) + 1;
+      int d2 = (int) (Math.random() * 6) + 1;
+      num = d1 - d2;
+      ta.appendText("Aging after 1 year modifies INT by " + num + CRLF);
+    }
+    int number = Integer.parseInt(l4int.getText());
+    number += num;
+    ta.appendText("INT = " + number + CRLF);
   }
   //</editor-fold>
 
