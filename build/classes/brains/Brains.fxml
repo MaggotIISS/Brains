@@ -57,11 +57,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <Label fx:id="FLUX" layoutX="8.0" layoutY="120.0" prefHeight="15.0" prefWidth="62.0" text="FLUX (1y)">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
       <Label fx:id="l1" layoutX="4.0" layoutY="75.0" text="AGES">
          <font>
             <Font size="10.0" />
@@ -119,7 +114,7 @@
             <Font name="System Bold" size="12.0" />
          </font></Label>
       <ComboBox fx:id="PARAMS" layoutY="47.0" onAction="#cb4ParamsAction" prefHeight="25.0" prefWidth="157.0" />
-      <Label layoutX="340.0" layoutY="1.0" onMouseClicked="#randomC4" text="C4">
+      <Label layoutX="340.0" layoutY="1.0" onMouseClicked="#randomC4" text="1D">
          <font>
             <Font size="10.0" />
          </font>
@@ -130,9 +125,9 @@
          </font>
       </TextField>
       <Button layoutX="170.0" layoutY="47.0" mnemonicParsing="false" onAction="#calculate" prefHeight="25.0" prefWidth="188.0" text="Button" visible="false" />
-      <TextArea fx:id="ta" layoutX="-2.0" layoutY="138.0" prefHeight="200.0" prefWidth="377.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="138.0" />
+      <TextArea fx:id="ta" layoutY="138.0" prefHeight="200.0" prefWidth="377.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="138.0" />
       <Label fx:id="l4About" alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="119.0" onMouseClicked="#showAbout" prefHeight="17.0" prefWidth="254.0" text="About" underline="true" />
-      <CheckBox layoutX="63.0" layoutY="119.0" mnemonicParsing="false" text="Aged" />
+      <CheckBox fx:id="AGED" layoutX="3.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#printDetails" prefHeight="17.0" prefWidth="157.0" text="Age FLUX (1y+) for INT" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="310.0" layoutY="1.0" onMouseClicked="#randomGenes" prefHeight="15.0" prefWidth="14.0" text="G">
          <font>
             <Font size="10.0" />
